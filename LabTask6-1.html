@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Display</title>
+<style>
+  .a {
+    display: block;
+    width: 200px;
+    height: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px;
+  }
+  #info {
+    padding: 10px;
+    background-color: lightgray;
+    border: 1px solid black;
+    width: 235px;
+  }
+  .b {
+    display: block;
+    width: 500px;
+    height: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .c {
+    display: inline-block;
+    width: 75px;
+    height: 25px;
+    padding: 5px;
+    border: 2px solid black;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-left: 5px;
+    text-align: middle;
+    font-size: 12px;
+  }
+  .d {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    color: white;
+    background-color: black;
+    vertical-align: middle;
+    margin-top: 30px;
+    margin-right: 20px;
+    font-size: 20px;
+  }
+  #Search_bar {
+    padding: 10px;
+    background-color: lightgray;
+    align-content: center;
+    width: 500px;
+    margin-left: 220px;
+  }
+ .e {
+   border-radius: 15px;
+   padding: 10px;
+   border: 1px solid black;
+   width="250px"
+   margin-top: 5px;
+ }
+ .f {
+    display: inline-block;
+    width: 100px;
+    height: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 50px;
+ }
+ .g {
+  display: inline-block;
+  width: 100px;
+  height: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+.h {
+    display: block;
+    width: 225px;
+    height: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 5px;
+ }
+ .i {
+   text-align: center;
+    display: inline-block;
+    width: 250px;
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: blue;
+    font-size: 16px;
+ }
+   .j {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    padding: 5px;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    vertical-align: middle;
+    margin-top: 30px;
+    margin-right: 20px;
+    font-size: 20px;
+  }
+</style>
+</head>
+<body>
+  <form>
+  <table>
+  <fieldset>
+    <!--- Name and Email text box --->
+  <div id="info">
+    <input type="text" placeholder="Name" class="a">
+    <input type="email" placeholder="Email" class="a">
+  </div>
+  
+    <!--- paragraph and button --->
+  <div>
+    <p>
+      <b>Thank you for talking to our customer service.<br> Would you like to take our quick survey?</b>
+    </p>
+  </div>
+  <div>
+      <button type="submit" class="c">Yes</button>
+      <button type="submit" class="c">No</button>
+  </div>
+  
+    <!--- Google search bar --->
+  <div style="text-align: center;" id="Search_bar">
+  <img src="Google logo.png" width="300px" height="100px">
+  </div>
+  <div align="middle" id="Search_bar">
+    <input type="text" class="e" placeholder="Search">
+  </div>
+  <div align="middle">
+    <input type="text" class="f" placeholder="First name">
+    <input type="text" class="g" placeholder="Last name">
+    <input type="email" class="h" placeholder="Email">
+    <button type="submit" class="i"><b>Sign Up</b></button>
+  </div>
+  
+    <!--- Uber request a ride --->
+  <div>
+    <h1>Request a ride now</h1>
+    <input type="text" placeholder="Enter pickup location" class="b">
+    <input type="text" placeholder="Enter destination" class="b">
+    <button type="submit" class="d">Request now</button>
+    <button type="submit" class="j">Schedule for later</button>
+  </div>
+</table>
+</form>
+</fieldset>
+</body>
+</html>
