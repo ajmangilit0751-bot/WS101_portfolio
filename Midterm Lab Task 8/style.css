@@ -1,0 +1,505 @@
+/* MLT8 style.css */
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  text-align: justify;
+}
+
+body.theme-1 {
+  background-color: #eaebec;
+  margin: 0;
+  padding: 40px 0;
+  width: 100%;
+  color: black;
+}
+
+.theme-1 header,
+.theme-1 main,
+.theme-1 footer {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.theme-1 header {
+  background-color: cyan;
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.theme-1 header h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
+.theme-1 main {
+  margin-top: 0;
+  background-color: white;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.theme-1 nav {
+  width: 25%;
+  float: left;
+}
+
+.theme-1 nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.theme-1 nav li {
+  background-color: rgb(243, 240, 240);
+  padding: 10px;
+  margin-bottom: 3px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  color: black;
+  cursor: pointer;
+  text-align: left;
+  font-size: medium;
+  font-weight: normal;
+}
+
+.theme-1 nav li:hover {
+  background-color: cyan;
+  color: black;
+  font-weight: bold;
+}
+
+.theme-1 nav li.active {
+  background-color: cyan;
+  color: black;
+  font-weight: bold;
+}
+
+.theme-1 section {
+  width: 50%;
+  float: left;
+  padding: 0 20px;
+}
+
+.theme-1 section h2 {
+  font-size: xx-large;
+  color: black;
+  margin-top: unset;
+  margin-bottom: unset;
+}
+
+.theme-1 section p {
+  font-size: medium;
+}
+
+.theme-1 section a {
+  color: black;
+  text-decoration: none;
+}
+
+.theme-1 section a:hover {
+  color: #4b4b52;
+}
+
+.theme-1 section h3 {
+  font-size: x-large;
+}
+
+.theme-1 aside {
+  margin-top: 15px;
+  height: 300px;
+  width: 25%;
+  float: left;
+  padding: 15px;
+  background-color: cyan;
+  color: black;
+  border-radius: 10px;
+}
+
+.theme-1 aside h3 {
+  font-size: 25px;
+  color: black;
+  margin-top: unset;
+  margin-bottom: unset;
+}
+
+.theme-1 footer {
+  clear: both;
+  margin-top: 0;
+  border: 1px solid gray;
+  background-color: lightcyan;
+  padding: 15px;
+  border-radius: 8px;
+  color: black;
+}
+
+.theme-1 footer p {
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .theme-1 nav,
+  .theme-1 section,
+  .theme-1 aside {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   THEME 2: Stylesheet 2
+========================================= */
+
+body.theme-2 {
+  margin: 0;
+  padding: 40px 0;
+  width: 100%;
+  color: #000;
+}
+
+.theme-2 header,
+.theme-2 main,
+.theme-2 footer {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.theme-2 header {
+  color: black;
+  padding: 40px 20px 20px 20px;
+  background-color: wheat;
+  border-radius: 0;
+}
+
+.theme-2 header h1 {
+  font-size: 3.5em;
+  margin: 0 0 10px 0;
+  font-weight: bold;
+}
+
+.theme-2 header p {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.theme-2 main {
+  background-color: #fff;
+  padding: 20px;
+  overflow: hidden; 
+  margin-top: 0;
+}
+
+.theme-2 nav {
+  float: right;
+  width: 180px;
+}
+
+.theme-2 nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.theme-2 nav li {
+  background-color: rosybrown;
+  color: #fff;
+  text-align: center;
+  padding: 8px;
+  margin-bottom: 12px;
+  border-radius: 20px;
+  font-size: 16px;
+  border: 2px solid lightcoral;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.theme-2 nav li:hover {
+  background-color: white;
+  color: rosybrown;
+}
+
+.theme-2 nav li.active {
+  background-color: #fff;
+  color: rosybrown;
+}
+
+.theme-2 section {
+  float: left;
+  width: calc(100% - 220px);
+  padding: 0;
+}
+
+.theme-2 section h2 {
+  color: coral;
+  font-size: 1.8em;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.theme-2 section p {
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.theme-2 section a {
+  color: #4a4847;
+  text-decoration: none;
+}
+
+.theme-2 section a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.theme-2 aside {
+  clear: both;
+  background-color: peachpuff;
+  color: #7e7675;
+  padding: 20px;
+  margin: 30px -20px -20px -20px;
+  height: auto;
+  width: auto;
+  border-radius: 0;
+  float: none;
+}
+
+.theme-2 aside h3 {
+  font-size: 1.4em;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #816d6a;
+}
+
+.theme-2 aside p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.theme-2 footer {
+  color: #fff;
+  padding: 20px 20px 40px 20px;
+  background-color: gray;
+  border: none;
+  border-radius: 0;
+  margin-top: 0;
+}
+
+.theme-2 footer p {
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* =========================================
+   THEME 3: Stylesheet 3
+========================================= */
+
+/* General Body Settings */
+  body.theme-3 {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Header Section */
+.theme-3 header {
+  padding: 20px 40px;
+}
+
+.theme-3 header h1 {
+  color: midnightblue; 
+  font-size: 2.2em;
+  margin-bottom: 5px;
+}
+
+/* Navigation - The horizontal button bar */
+.theme-3 nav {
+  background-color: #fff;
+  padding: 0 40px;
+}
+
+.theme-3 nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Makes the list horizontal */
+  gap: 2px;
+}
+
+.theme-3 nav li {
+  background-color: black; 
+  color: #fff;
+  padding: 10px 25px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  flex: 1; /* Makes buttons equal width */
+  max-width: 150px;
+}
+
+/* The Active State (Stylesheet 3 is blue in the image) */
+.theme-3 nav li.active {
+  background-color: darkviolet;
+  color: white;
+}
+
+.theme-3 nav li:hover {
+  background-color: royalblue;
+  color: white;
+  opacity: 0.8;
+}
+
+/* Main Content Area */
+.theme-3 main {
+  padding: 20px 40px;
+}
+
+.theme-3 main h2 {
+  color: midnightblue; 
+  font-size: 1.5em;
+}
+
+/* The Side-Bar Box */
+.theme-3 .side-bar {
+  background-color: lightsteelblue;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  margin-top: 20px;
+  margin-left: 85px;
+}
+
+.theme-3 .side-bar h3 {
+  color: #3f51b5; /* Blue heading for the sidebar */
+  margin-top: 0;
+  font-size: 1.1em;
+}
+
+.theme-3 .description {
+  margin-top: 20px;
+  margin-left: 85px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+}
+.theme-3 footer p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-left: 85px;
+}
+
+/* =========================================
+   THEME 4: Stylesheet 4
+========================================= */
+
+/* General Body Styles */
+body.theme-4 {
+  background-color: #000; /* Pitch black background */
+  color: #333399;         /* Dark Blue/Purple text color */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Header */
+.theme-4 header h1 {
+  color: #333399;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.theme-4 header p {
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+/* Main Container - Using Flexbox for the 2-column layout */
+.theme-4 main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Navigation - Left Column */
+.theme-4 nav {
+  flex: 1;
+  min-width: 150px;
+}
+
+.theme-3 nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.theme-4 nav li {
+  color: #333399;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+/* Section - Middle Column */
+.theme-4 section {
+  flex: 3;
+  min-width: 300px;
+}
+
+.theme-4 section h2 {
+  color: #333399;
+  border-bottom: 1px solid #333399;
+  padding-bottom: 10px;
+}
+
+.theme-4 section a {
+  color: #333399;
+  text-decoration: underline;
+}
+
+/* Sidebar - Right Column Box */
+.theme-4 aside {
+  flex: 1;
+  min-width: 200px;
+  border: 1px solid #fff; /* White border as seen in image */
+  padding: 15px;
+  height: fit-content;
+}
+
+.theme-4 aside h3 {
+  color: #fff;
+  margin-top: 0;
+  font-size: 1em;
+}
+
+.theme-4 aside p {
+  color: #ccc; /* Slightly lighter gray for sidebar text */
+  font-size: 0.85em;
+  line-height: 1.4;
+}
+
+/* Footer - Full Width at Bottom */
+.theme-4 footer {
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 10px;
+  border-top: 2px solid #333;
+}
+
+.theme-4 footer p {
+  color: #fff;
+  font-size: 0.8em;
+  text-align: center;
+}
