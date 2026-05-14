@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Positions</title>
+
+<style>
+    body{
+        height: 3000px;
+    }
+
+    .x{
+        background-color: black;
+        border-radius: 50%;
+        color: white;
+        top: 10px;
+        right: 10px;
+        padding: 15px;
+        position: absolute;
+    }
+
+    .box{
+        background-color: gray;
+        width: 320px;
+        height: 180px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .pic{
+        margin-top: 100px;
+        margin-left: 20px;
+        display: inline-block;
+        position: relative;
+        
+    }
+
+    .image{
+        width: 320px;
+        display: block;
+    }
+
+    .dis{
+        position: absolute;
+        top: 10px;
+        right: 0;
+        background-color: gray;
+        color: white;
+        padding: 5px 10px;
+    }
+
+    .cart-overlay{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background-color: rgba(255, 255, 255, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cart{
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+</style>
+</head>
+<body>
+    <button class="x">X</button>
+    <div class="box"></div>
+       <div class="pic"> <img src="/images/Akaashi.jpg" alt="Akaashi" class="image"> 
+            <div class="dis">20% OFF</div>
+            <div class="cart-overlay"><button class="cart-button">Add to Cart</button>
+            </div>
+        </div>
+</body>
+</html>

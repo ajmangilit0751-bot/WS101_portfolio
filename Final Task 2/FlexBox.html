@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+
+<style>
+    /* PART 1 */
+    .flex-container1 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .flex-container2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .flex-container3 {
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+        border: 1px solid gray;
+        align-items: center;
+    }
+
+    /* PART 2 @800 */
+    .container2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    body{
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: peachpuff;
+    }
+
+    .header2, .footer2 {
+        text-align: left;
+        padding: 20px;
+    }
+
+    .header2 {
+        top: 0;
+    }
+
+    .footer2 {
+        bottom: 0;
+    }
+
+    .main-container2 {
+        display: flex;
+        margin-top: 60px; /* Account for fixed header */
+    }
+    .left-nav2 {
+        flex: 1;
+    }
+    .right-nav2 {
+        flex: 2;
+    }
+
+    .section2 {
+        background-color: #5cb85c;
+        border: 2px solid #bdff08;
+        height: 250px;
+    }
+
+    .left-nav2, .right-nav2 {
+        background-color: #5cb85c;
+        border: 5px solid #bdff08;
+        height: 250px;
+    }
+
+    @media (max-width: 800px) {
+        .main-container2 {
+            flex-direction: column;
+        }
+        .left-nav2, .right-nav2 {
+            width: 100%;
+            height: 200px;
+        }
+    }
+
+    /* PART 2 @400 */
+    .header3, .footer3 {
+        text-align: left;
+        padding: 20px;
+    }
+
+    .header3 {
+        top: 0;
+    }
+
+    .footer3 {
+        bottom: 0;
+    }
+
+    .main-container3 {
+        display: flex;
+        margin-top: 60px; /* Account for fixed header */
+        flex-direction: column-reverse;
+    }
+
+    .section3 {
+        background-color: #5cb85c;
+        border: 2px solid #bdff08;
+    }
+
+    .left-nav3{
+        background-color: #5cb85c;
+        border: 5px solid #bdff08;
+        height: 150px;
+    }
+    .right-nav3 {
+        background-color: #5cb85c;
+        border: 5px solid #bdff08;
+        height: 200px;
+    }
+
+    @media (max-width: 400px) {
+        .main-container3 {
+            flex-direction: row;
+        }
+        .left-nav3{
+            flex: 1;
+            height: 150px;
+        }
+        .right-nav3 {
+            flex: 2;
+            height: 150px;
+        }
+    }
+</style>
+</head>
+<body>
+    <h1>FlexBox</h1>
+
+    <!-- PART 1 -->
+    <h2>Part 1: Basic FlexBox</h2>
+    <div class="flex-container1">
+        <div style="background-color: blue; width: 200px;">
+            200px
+        </div>
+        <div style="background-color: orange; width: 75px;">
+            75px
+        </div>
+    </div>
+
+    <div class="flex-container1" style="margin-top: 20px;">
+        <div style="background-color: blue; width: 50px;">item1</div>
+        <div style="background-color: orange; flex: 1;">item2</div>
+        <div style="background-color: blue; width: 75px;">item3</div>
+    </div>
+
+    <div class="flex-container2" style="margin-top: 20px;">
+        <div style="background-color: orange;">item1</div> 
+        <div style="background-color: orange;">item2</div> 
+        <div style="background-color: orange;">item3</div> 
+        <div style="background-color: orange;">item4</div>
+    </div>
+
+    <div class="flex-container3" style="margin-top: 20px; margin-bottom: 50px;">
+        <div style="background-color: blue;">item1</div>
+        <div style="background-color: blue;">item2</div> 
+    </div>
+
+    <hr>
+
+    <!-- PART 2 @800 -->
+    <h2>Part 2: FlexBox @800px</h2>
+    <header class="header2">This is a Header</header>
+    
+    <div class="container2">
+        <div class="main-container2">
+            <section class="left-nav2">left-nav Section</section>
+            <section class="right-nav2">right-nav Section</section>
+        </div>
+        <footer class="footer2">This is a Footer</footer>
+    </div>
+
+    <hr>
+
+    <!-- PART 2 @400 -->
+    <h2>Part 2: FlexBox @400px</h2>
+    <header class="header3">This is a Header</header>
+    
+    <div class="main-container3">
+        <section class="left-nav3">left-nav Section</section>
+        <section class="right-nav3">right-nav Section</section>
+    </div>
+
+    <footer class="footer3">This is a Footer</footer>
+    
+</body>
+</html>
