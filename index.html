@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angel Josh Mangilit | Portfolio</title>
+<meta name="description" content="Portfolio of Angel Josh Mangilit showcasing WS101 lab activities and final projects.">
+
+<style>
+    :root {
+        --bg: #0f1f52;
+        --surface: rgba(255,255,255,0.95);
+        --surface-soft: rgba(255,255,255,0.85);
+        --accent: #ff9f1c;
+        --accent-soft: #ffca7a;
+        --text: #102a43;
+        --text-muted: #4a6271;
+        --border: rgba(15,45,78,0.14);
+        --radius: 24px;
+        --shadow: 0 20px 60px rgba(0,0,0,0.14);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Inter, 'Segoe UI', Arial, sans-serif;
+        color: var(--text);
+        background: radial-gradient(circle at top left, #4b7cff 0%, #0f1f52 35%, #08122b 100%);
+    }
+
+    body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background: radial-gradient(circle at top right, rgba(255,255,255,0.14), transparent 28%);
+        pointer-events: none;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
+    a {
+        color: var(--accent);
+        text-decoration: none;
+        transition: color 180ms ease;
+    }
+
+    a:hover,
+    a:focus {
+        color: #ffd17a;
+    }
+
+    .page {
+        width: min(1140px, calc(100% - 2rem));
+        margin: 0 auto;
+        padding: 2rem 0 3rem;
+    }
+
+    .site-header {
+        display: grid;
+        gap: 1.1rem;
+        margin-bottom: 2rem;
+        padding: 2rem;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        box-shadow: var(--shadow);
+    }
+
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.65rem 1rem;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.14);
+        color: #fff;
+        font-weight: 700;
+    }
+
+    .site-header h1 {
+        font-size: clamp(2.25rem, 4vw, 3.6rem);
+        line-height: 1.02;
+        margin: 0;
+        color: #fff;
+    }
+
+    .site-header p {
+        margin: 0;
+        max-width: 68ch;
+        color: rgba(255,255,255,0.86);
+        line-height: 1.8;
+        font-size: 1rem;
+    }
+
+    .profile-card {
+        display: grid;
+        grid-template-columns: 170px minmax(0, 1fr);
+        gap: 1.5rem;
+        align-items: center;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+    }
+
+    .profile-avatar {
+        width: 170px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid var(--accent);
+    }
+
+    .profile-copy h2 {
+        margin: 0 0 0.75rem;
+        line-height: 1.2;
+        font-size: clamp(1.6rem, 2vw, 2.2rem);
+        color: var(--text);
+    }
+
+    .profile-copy p {
+        margin: 0;
+        color: var(--text-muted);
+        line-height: 1.85;
+    }
+
+    .section-card {
+        margin-bottom: 1.5rem;
+        padding: 2rem;
+        background: var(--surface);
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+    }
+
+    .section-card h2 {
+        margin: 0 0 1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1.55rem;
+        color: var(--text);
+    }
+
+    .section-card h2::before {
+        content: attr(data-icon);
+        font-size: 1.4rem;
+    }
+
+    .section-card p,
+    .section-card li {
+        color: var(--text-muted);
+        line-height: 1.8;
+    }
+
+    .section-card ul {
+        margin: 0;
+        padding-left: 1.3rem;
+    }
+
+    .section-card li {
+        margin-bottom: 0.85rem;
+    }
+
+    .projects-grid {
+        display: grid;
+        gap: 1rem;
+    }
+
+    .project-card {
+        padding: 1.1rem 1.2rem;
+        border-radius: 20px;
+        background: rgba(255,255,255,0.92);
+        border: 1px solid rgba(255,159,28,0.2);
+    }
+
+    .project-card strong {
+        display: inline-block;
+        margin-bottom: 0.35rem;
+        color: var(--text);
+    }
+
+    .project-card p {
+        margin: 0.35rem 0;
+        color: var(--text-muted);
+    }
+
+    .site-footer {
+        margin-top: 2rem;
+        padding-top: 0.75rem;
+        color: rgba(255,255,255,0.75);
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    @media (max-width: 760px) {
+        .profile-card {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .profile-copy {
+            display: grid;
+            place-items: center;
+        }
+
+        .profile-copy h2 {
+            text-align: center;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="page">
+    <header class="site-header">
+        <span class="hero-badge">👋 WS101 Portfolio</span>
+        <h1>Hi, I’m Angel Josh Mangilit</h1>
+        <p>Welcome to my portfolio — a collection of my WS101 lab activities and final projects. This page highlights what I have learned in WS 101, with clear structure, responsive layout, and thoughtful design.</p>
+    </header>
+
+    <section class="profile-card">
+        <img src="images/Josh.png" alt="Portrait of Angel Josh Mangilit" class="profile-avatar">
+        <div class="profile-copy">
+            <h2>Web development student</h2>
+            <p>I enjoy learning how things work, solving problems with thoughtful design, and sharing my progress through clean, responsive web pages. I also love spending time with family and friends and meeting people with similar interests.</p>
+        </div>
+    </section>
+
+    <main>
+        <article class="section-card" id="about-me" data-icon="🙎‍♂️">
+            <h2>About Me</h2>
+            <p>I am a caring and curious person. I enjoy exploring new ideas and connecting with others who share my interests.</p>
+        </article>
+
+        <article class="section-card" id="believe-in" data-icon="💡">
+            <h2>What I Believe In</h2>
+            <ul>
+                <li>Small acts of kindness can make a big difference.</li>
+                <li>Patience often leads to better results.</li>
+                <li>Being grateful helps me stay positive and focused.</li>
+            </ul>
+        </article>
+
+        <article class="section-card" id="education" data-icon="🎓">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>College:</strong> Bachelor of Science in Information Technology, Pampanga State Agricultural University (PSAU)</li>
+                <li><strong>Senior High School:</strong> Science, Technology, Engineering, and Mathematics (STEM), Andres M. Luciano High School (AMLHS)</li>
+                <li><strong>Junior High School:</strong> Andres M. Luciano High School (AMLHS)</li>
+            </ul>
+        </article>
+
+        <article class="section-card" id="i-love" data-icon="❤️">
+            <h2>I Love</h2>
+            <ul>
+                <li>Going out with family and friends</li>
+                <li>Watching anime and reading manga</li>
+                <li>Listening to music</li>
+                <li>Playing video games</li>
+            </ul>
+        </article>
+
+        <article class="section-card" id="my-projects" data-icon="📂">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <strong>Midterm Tasks</strong>
+                    <p><strong>Task 1:</strong> <a href="Midterm Lab Task 1/Resume.html" target="_blank">Creating a resume using HTML</a></p>
+                    <p><strong>Task 2:</strong> <a href="Midterm Lab Task 2/ul and ol .html" target="_blank">Creating unordered and ordered lists</a></p>
+                    <p><strong>Task 3:</strong> <a href="Midterm Lab Task 3/HTML_Forms.html" target="_blank">Creating HTML forms</a></p>
+                    <p><strong>Task 4:</strong> <a href="Midterm Lab Task 4/Image Maps.html" target="_blank">Creating image maps</a></p>
+                    <p><strong>Task 5:</strong> <a href="Midterm Lab Task 5/Resume2.html" target="_blank">Resume with HTML and CSS</a></p>
+                    <p><strong>Task 6:</strong> <a href="Midterm Lab Task 6/LabTask6-1.html" target="_blank">Using semantic HTML</a></p>
+                </div>
+
+                <div class="project-card">
+                    <strong>Final Tasks</strong>
+                    <p><strong>Task 1:</strong> <a href="Final Task 1/CSS Positions.html" target="_blank">CSS Positions</a></p>
+                    <p><strong>Task 2:</strong> <a href="Final Task 2/FlexBox.html" target="_blank">Flexbox layout</a></p>
+                    <p><strong>Task 3:</strong> <a href="Final Task 3/Bootstrap.html" target="_blank">Bootstrap page</a></p>
+                </div>
+
+                <div class="project-card">
+                    <strong>Final Requirement</strong>
+                    <p><strong>Website:</strong> <a href="https://jlagorto1984-tech.github.io/Unihive/" target="_blank">Unihive</a></p>
+                    <p><strong>Documentation:</strong> <a href="https://drive.google.com/drive/folders/1v2Meu2Tu0Sh5iAyBQ-KaigyZbeSigam3l?usp=sharing" target="_blank">Unihive Documentation</a></p>
+                    <p><strong>Data Files:</strong> <a href="https://github.com/jlagorto1984-tech/Unihive.git" target="_blank">Unihive repository</a></p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+</div>
+</body>
+</html>
